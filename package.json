@@ -18,7 +18,9 @@
     "node-firestore-import-export": "^1.1.0",
     "now": "^19.1.1",
     "now-secrets": "^1.0.3",
+    "query-string": "^6.13.1",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "react-hook-form": "^6.0.4"
   }
 }

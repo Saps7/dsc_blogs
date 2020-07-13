@@ -13,7 +13,7 @@ export default function Home() {
     
     <div className="container">
       <Head>
-      <meta charset="UTF-8"></meta>
+      <meta charSet="UTF-8"></meta>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         <title>DSC NSEC blogs!</title>
         <link rel="icon" href="/favicon.ico" />
@@ -41,7 +41,7 @@ export default function Home() {
             <p>We are Developer Student Club of Netaji Subhash Engineering College, New Garia, Kolkata.</p>
           </a>
 
-          <Link href="/posts/first-post"><a className="card">
+          <Link href="/signin"><a className="card">
             <h3>Log In &rarr;</h3>
             <p>Start your Blog Journey today!</p>
           </a></Link>
