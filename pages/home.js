@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { AppWithAuthorization } from "../src/components/App";
-import { db } from "../src/firebase";
 import Typography from '@material-ui/core/Typography';
 import Head from "next/head"
 import Link from 'next/link'
