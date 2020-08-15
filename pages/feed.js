@@ -1,7 +1,6 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import Head from 'next/head'
 import Link from 'next/link'
-import {useRouter} from 'next/router'
 import Icon from '@material-ui/core/Icon';
 import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
@@ -17,10 +16,7 @@ import InputBase from '@material-ui/core/InputBase';
 import Box from '@material-ui/core/Box';
 import Button from "@material-ui/core/Button"
 import { blue } from '@material-ui/core/colors';
-
-import { UserContext } from "../src/contexts/UserContext";
-
-
+import {IndexLink} from "./index";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -72,23 +68,13 @@ fontSize:50,
   },
 }));
 
-const ScrollableTabsButtonAuto = () => {
-
-  const router = useRouter()
-  const context = useContext(UserContext);
+export default function ScrollableTabsButtonAuto() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
-
-
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
-  if(!context.user?.uid) {
-    router.push({pathname : '/'})
-  }
-
 
   return (
     <div className={classes.root}>
@@ -114,7 +100,7 @@ const ScrollableTabsButtonAuto = () => {
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0} id="new"><br></br>
-
+      
       </TabPanel>
       <TabPanel value={value} index={1}>
         
@@ -173,7 +159,7 @@ const ScrollableTabsButtonAuto = () => {
         </div>
       </TabPanel>
       <TabPanel value={value} index={4}>
-      Item 5
+        Item Five
       </TabPanel>
       <TabPanel value={value} index={5}>
         Item Six
@@ -182,15 +168,7 @@ const ScrollableTabsButtonAuto = () => {
       <Typography variant="h4" gutterBottom style={{ textAlign: "center" }}>
         Do you wish to log out?
         </Typography>
-        <center>
-          <button 
-            onClick={() => {
-              context.setUser(null);
-              Router.push('/signin')
-            }}>
-            Logout
-          </button>
-        </center>
+        <center><IndexLink/></center>
       </TabPanel>
       <style jsx>{`
       .title {
@@ -255,12 +233,9 @@ const ScrollableTabsButtonAuto = () => {
 }
 const FeedLink = () => (
     <p>
-      <Link href={routes.FEED}>
+      <Link href='./feed'>
         <a>Feed</a>
       </Link>
     </p>
   );
-
-export default ScrollableTabsButtonAuto
-
-export{ FeedLink}
+  export{ FeedLink}
