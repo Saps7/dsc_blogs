@@ -2,8 +2,8 @@ import React, { useContext } from "react";
 import Typography from '@material-ui/core/Typography';
 import Head from "next/head"
 import Link from 'next/link'
-import {FeedLink} from "./feed"
 import {UserContext} from '../src/contexts/UserContext'
+import ScrollableTabsButtonAuto from './feed'
 
 function HomePage () {
 
@@ -22,19 +22,8 @@ function HomePage () {
           <b>DSC NSEC BLOGS-<i id="s">Write Your Own Story!</i></b>
         </h1><br></br>
         <hr></hr>
-        <Typography variant="h5" gutterBottom style={{textAlign: "left" }}>
+        <ScrollableTabsButtonAuto/>
 
-<center><img src="https://media.giphy.com/media/bcKmIWkUMCjVm/giphy.gif"></img></center>
-<center><p>Now you are in the page, so why wait? Let's proceed.</p></center>        
-        </Typography>
-        <center><button
-            variant="contained"
-            color="primary"
-            type="submit"
-            style={{ marginTop: "20px", width: "200px" }}
-          >
-            <FeedLink/>
-          </button></center>
           <style jsx>{`
        #book1{
         float:left;
