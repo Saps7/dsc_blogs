@@ -11,17 +11,6 @@ function HomePage () {
 
     return (
         <>
-    <Head>
-    <meta charset="UTF-8"></meta>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-     <title>DSC NSEC BLogs!</title>
-     <link rel="icon" href="https://raw.githubusercontent.com/procheta1999/DSC-NSEC-Blogs/master/public/favicon.ico" />
-   </Head>
-   <h1 className="title">
-        <img src="https://github.com/procheta1999/DSC-NSEC-Blogs/blob/master/public/dsc.png?raw=true" alt="dsc Logo" className="logo"/>
-          <b>DSC NSEC BLOGS-<i id="s">Write Your Own Story!</i></b>
-        </h1><br></br>
-        <hr></hr>
         <ScrollableTabsButtonAuto/>
 
           <style jsx>{`
